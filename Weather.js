@@ -7,7 +7,6 @@ weatherPart = wrapper.querySelector(".weather-part"),
 wIcon = weatherPart.querySelector("img"),
 arrowBack = wrapper.querySelector("header i");
 
-
 let api;
 
 inputField.addEventListener("keyup", e =>{
@@ -85,7 +84,10 @@ function weatherDetails(info){
         wrapper.classList.add("active");
     }
 }
-
 arrowBack.addEventListener("click", ()=>{
     wrapper.classList.remove("active");
 });
+
+var today = new Date();
+var date = today.getFullYear() + '-' + (today.getMonth()+1)+ '-'+ today.getDate();
+document.getElementById("p1").innerHTML= date;
